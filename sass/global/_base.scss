@@ -1,0 +1,65 @@
+html{
+  height: 100%;
+
+}
+
+body {
+  font-family: $font-en;
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-weight: 400;
+  position: relative;
+  background-color: #FFFFFF;
+  color:#272727;
+}
+
+a{
+  color: $link-color;
+  text-decoration: none;
+}
+
+.main-wrapper{
+  background-color: #253746;
+  /*background-image: image-url('main-bg.jpg');
+  background-position: center bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;*/
+  padding-top: 74px;
+}
+/*** Star Rating Styles ***/
+//.part {height: 45px;}
+.stars {display:inline-block;width:auto;position:relative; font-size:16px;
+@media all and (min-width: $screen-sm-min){
+    font-size:18px;
+}
+@media all and (min-width: $screen-md-min){
+    font-size:22px;
+}
+float: none; margin-right: auto;margin-left:auto}
+/*** Star Rating Styles ***/
+.part {height: 45px;}
+.stars {display:inline-block;width:auto;position:relative;font-size:28px; float: left; margin-right: 10px;}
+.stars:before {content:"\2605\00a0\2605\00a0\2605\00a0\2605\00a0\2605";position:absolute;overflow:hidden;z-index:1;left:0px;top:0px;color:#252525;}
+.stars:after {content:"\2605\00a0\2605\00a0\2605\00a0\2605\00a0\2605";position:relative;color:#898989;}
+.stars.rate:after {position:absolute;left:0px; top:0}
+.stars.rate > A {color:transparent;text-decoration:none;position:relative;z-index:2;}
+//.stars.rate:hover:before,.stars.rate:hover:after {display:none;}
+//.stars.rate:hover > A {color:#252525;}
+//.stars.rate:hover > A:hover {color:#252525;top:-1px;}
+//.stars.rate >A:hover ~ A {color:#898989;text-shadow:none;}
+.stars:NOT([data-percent]):before, .stars[data-percent="0"]:before {display:none;}
+/* 1/2 a star */
+.stars[data-percent="10"]:before {width:10%;}
+/* 1 star */
+.stars[data-percent="20"]:before {width:20%;}
+/* 1 & 1/2 stars */
+.stars[data-percent="30"]:before {width:30%;}
+/* etc. */
+.stars[data-percent="40"]:before {width:40%;}
+.stars[data-percent="50"]:before {width:50%;}
+.stars[data-percent="60"]:before {width:60%;}
+.stars[data-percent="70"]:before {width:70%;}
+.stars[data-percent="80"]:before {width:80%;}
+.stars[data-percent="90"]:before {width:90%;}
+.stars[data-percent="100"]:before {width:100%;}
+.part .rating-numeric{font-size: 30px; font-family: 'DINProLight'; color: #252525;display:inline-block; float: left;}

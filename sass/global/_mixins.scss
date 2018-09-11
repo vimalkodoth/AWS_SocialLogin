@@ -1,0 +1,38 @@
+@mixin absolute-center {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top:0px;
+  bottom: 0px;
+  margin: auto;
+}
+
+@mixin hidden-text-icon {
+  font-size: 0px;
+  text-indent: -999px;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//e.g  @include multiLineEllipsis(2, 25px);
+@mixin multiLineEllipsis ($line, $lineHeight) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: $lineHeight; // fallback
+  max-height: $line*$lineHeight; // fallback
+  -webkit-line-clamp: $line; // number of lines to show
+  -webkit-box-orient: vertical;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

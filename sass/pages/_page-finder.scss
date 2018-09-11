@@ -1,0 +1,181 @@
+.pag-finder-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display:none;
+    z-index:9999;
+    .loader_icon {
+	    background: transparent url(/images/car_loader.gif) no-repeat left;
+	    background-size: 100%;
+	    z-index: 9999;
+	    height: 50px;
+	    width: 50px;
+	    transform: translateY(-50%);
+	    top: 50%;
+	    position: relative;
+	    margin: 0px auto;
+	}
+}
+.page-finder-items {
+	width: 320px;
+	@media all and (min-width: $screen-xs-min){
+		width:460px;
+	}
+	@media all and (min-width: $screen-sm-min){
+		width: 670px;
+	}
+
+  	@media all and (min-width: $screen-md-min){
+		width:900px;
+	}
+	margin:0px auto;
+	ul {
+	   display: -webkit-flex;
+	   display: flex;
+//	   -webkit-align-items: center;
+	   align-items: center;
+//	   -webkit-justify-content: space-between;
+	   justify-content: space-between;
+//	   -webkit-flex-direction: row;
+	   flex-direction: row;
+//	   -webkit-flex-wrap: wrap;
+	   flex-wrap: wrap;
+//	   -webkit-flex-flow: row wrap;
+	   flex-flow: row wrap;
+//	   -webkit-align-content: flex-end;
+	   align-content: flex-end;
+	}
+	li{
+		position:relative;
+	    box-shadow: 0px 1px 4px #e0e0e0;
+	    cursor: pointer;
+	    cursor: hand;
+		margin:25px 10px;
+		width:125px;
+		height:125px;
+		@media all and (min-width: $screen-sm-min){
+			width:200px;
+			height:200px;
+		}
+		&#finance{
+			background: transparent url('/images/finance-ico.png') no-repeat center; 
+		}
+		&#insurance{
+			background: transparent url('/images/insurance-ico.png') no-repeat center; 
+		}
+		&#tyre_battery{
+			background: transparent url('/images/tyre_battery-ico.png') no-repeat center; 
+		}
+		&#detailing_shop{
+			background: transparent url('/images/detailing_shop-ico.png') no-repeat center; 
+		}
+		&#rent_a_car{
+			background: transparent url('/images/rent_a_car-ico.png') no-repeat center; 
+		}
+		&#accessories_shop{
+			background: transparent url('/images/accessories_shop-ico.png') no-repeat center; 
+		}
+		&#driving_institute{
+			background: transparent url('/images/driving_institute-ico.png') no-repeat center; 
+		}
+		&#car_wash{
+			background: transparent url('/images/car_wash-ico.png') no-repeat center; 
+		}
+		&#finance, &#insurance, &#tyre_battery, &#detailing_shop, &#rent_a_car, &#accessories_shop, &#driving_institute,&#car_wash{
+			background-size : 40%;
+			@media all and (min-width: $screen-sm-min){
+				background-size: auto;
+			}
+		}
+		span {
+			cursor: pointer;
+			cursor: hand;
+			font-family:'DINProRegular';
+			font-size:12px;
+			@media all and (min-width: $screen-sm-min){
+				font-size:14px;
+			}
+			text-transform: uppercase;
+		    position: absolute;
+		    bottom: 0;
+		    width: 100%;
+		    text-align: center;
+		    margin: 5px 0;
+		}
+	}
+}
+
+.filter-wrapper {
+	display:none;
+	overflow:hidden;
+	.page-finder-count {
+		float:left;
+		font-family: Longhaul;
+	    font-size: 22px;
+	    color: #ee2d32;
+		.label{
+			padding-left: 8px;
+    		color: #000;
+		}
+	}
+	.page-finder-filter {
+		float:right;
+
+		#finder-sort-dropdown{
+			font-size:18px;
+		}
+	}
+}
+.page-finder-results {
+	clear:both;
+	.finder-item {
+	    overflow: hidden;
+	    margin: 8px 0;
+	    padding: 5px;
+		.finder-item-meta{
+			float:left;
+		}
+		.finder-item-info{
+			float:right;
+
+			h2.tel{
+				background: transparent url('/images/contact-ico.png') no-repeat 0 3px;
+			    background-size: 26px;
+			    padding-left: 32px;
+			}
+		}
+		.finder-item-image {
+		    float: left;
+		    margin: 0px 10px 5px 0;
+		    width: 270px;
+		    height: 164px;
+		    padding: 3px;
+		    border: 1px solid #e0e0e0;
+
+		    img {
+	    	    max-width: 100%;
+				max-height: 100%;
+		    }
+		}
+		.finder-item-details {
+			h2, h4, h5{
+				margin:0;
+			}
+			/*
+			.part{
+				height:40px;
+				line-height:40px;
+			}
+			.rating-numeric {
+				margin-left:10px;
+			}
+			.stars,.rating-numeric {
+				float:left;
+				font-size:16px;
+			}
+			*/
+		}
+	}
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatiable" content="ie=edge">
+<!--   <link rel="stylesheet" type="text/css" href="styles.css"> -->
+	<!--<meta name="google-signin-client_id" content="703105099754-jmp7kjet7efsc3b3ofpll17qs566ls4r.apps.googleusercontent.com">-->
+	<title>Review</title>
+</head>
+<body>
+<div class="page-wrapper container">
+  <div class="pag-finder-overlay">
+    <div class="loader_icon"></div>
+  </div>
+  <div class="page-finder-items">
+    <ul>
+      <li id="finance" data-id="bank"><span>Finance</span></li>
+      <li id="insurance" data-id="insurance"><span>Insurance</span></li>
+      <li id="tyre_battery" data-id="tyre_battery"><span>Tyre & Battery</span></li>
+      <li id="detailing_shop" data-id="detailing_shop"><span>Detailing Shop</span></li>
+      <li id="rent_a_car" data-id="car_rental"><span>Rent a car</span></li>
+      <li id="accessories_shop" data-id="car_accessories"><span>Accessories Shop</span></li>
+      <li id="driving_institute" data-id="driving_institute"><span>Driving Institute</span></li>
+      <li id="car_wash" data-id="car_wash"><span>Car Wash</li>
+    </ul>
+  </div> 
+  <div class="page-finder-results-wrapper">
+    <div class="filter-wrapper">
+        <div class="page-finder-count"><span class="count">0</span><span class="label">RESULTS</span></div>
+        <div class="page-finder-filter">
+          <select id="finder-sort-dropdown">
+            <option value="distance">Distance</option>
+            <option value="rating">Rating</option>
+          </select>
+        </div>
+    </div>
+    <div class="page-finder-results">
+      <ul>
+<!--           <li class="finder-item">
+            <div class="finder-item-image">
+              <img src="./images/adbi_img.png" />
+            </div>
+            <div class="finder-item-details">
+              <div class="finder-item-meta">
+                <h2>ADIB New Car Finance - Murabaha</h2>
+                <div class="part">
+                    <div class="stars rate" data-percent="70">
+                        <a href="#" title="awful">★</a>
+                        <a href="#" title="ok">★</a>
+                        <a href="#" title="good">★</a>
+                        <a href="#" title="great">★</a>
+                        <a href="#" title="awesome">★</a>
+                    </div>
+                    <div class="rating-numeric">3.5</div>
+                </div>
+              </div>
+              <div class="finder-item-info">
+                <h2 class="tel">+971 26558687</h2>
+              </div>
+            </div>
+          </li>
+          <li></li> -->
+          
+      </ul>
+    </div>
+  </div>
+</div>
+<script id="finder-item-template" type="text/x-handlebars-template">
+<li class="finder-item">
+    <div class="finder-item-image">
+      <img src="{{ finderGetImageUrl id }}" />
+    </div>
+    <div class="finder-item-details">
+      <div class="finder-item-meta">
+        <h2>{{ name }}</h2>
+        <h4>{{ details.formatted_address }}</h4>
+        {{#if distance}}
+          <h5>{{round distance}} km far away</h5>
+        {{/if}}
+        <div class="box-rate">
+        <div class="part">
+            <div class="stars rate" data-percent="{{ percentage rating }}">
+                <a href="#" title="awful">★</a>
+                <a href="#" title="ok">★</a>
+                <a href="#" title="good">★</a>
+                <a href="#" title="great">★</a>
+                <a href="#" title="awesome">★</a>
+            </div>
+            <div class="rating-numeric">{{ rating }}</div>
+        </div>
+        </div>
+      </div>
+      <div class="finder-item-info">
+        <h2 class="tel">{{ finderGetPhoneNumber id }}</h2>
+      </div>
+    </div>
+</li>
+</script>
+<script id="finder-item-error-template" type="text/x-handlebars-template">
+<li class="finder-item">
+  <p> Search result has either EMPTY RESPONSE or some error has occured!. Please try again later </p>
+  <p> Response : {{ errorText }}</p>
+</li>
+</script>
+<script src="output.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.buyersguide {
+	.header {
+	    background: transparent url(/images/buyers_guide_banner.png) no-repeat;
+		min-height: 256px;
+		position:relative;
+
+		h1{
+			position:absolute;
+			bottom:20px;
+			padding:20px 30px;
+			font-size:42px;
+			color:#fff;
+			font-family: "Longhaul";
+			letter-spacing:0.04em;
+		}
+	}
+	.clear {
+		clear:both;
+	}
+	.content-middle {
+		overflow:hidden;
+		clear:both;
+		ul {
+			margin:50px auto;
+			max-width:500px;
+		}
+		.content-first-row,.content-second-row{
+			clear:both;
+			float:left;
+		}
+		.select {
+			&-costindex {
+				background: transparent url(/images/buyers_guide_icon.png) no-repeat ;
+			}
+			&-carforyou {
+				background: transparent url(/images/carforyou_icon.png) no-repeat;
+			}
+			&-peoplethoughts {
+				background: transparent url(/images/people_thoughts_icon.png) no-repeat;
+			}
+			&-buyersguide {
+				background: transparent url(/images/buyers_guide_icon.png) no-repeat;
+			}
+			&-costindex, &-carforyou, &-peoplethoughts, &-buyersguide {
+				width :200px;
+				height:200px;
+				background-position: 50% 40px;
+				background-size: 80%;
+				margin: 30px 18px;
+				text-align:center;
+				float:left;
+
+				h2{
+					font-family: "Longhaul";
+					font-size: 22px;
+					letter-spacing: 0.02em;
+					margin:0;
+					color: #000;
+				}
+
+				&:hover {
+					opacity:0.75;
+				}
+			}
+
+		}
+	}
+}
